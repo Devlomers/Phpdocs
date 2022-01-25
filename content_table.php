@@ -230,7 +230,7 @@ if(!isset($_SESSION['email_id'])){
                         <td><?php echo $arr['photos'];?></td>
                         <td><?php echo $arr['videos'];?></td>
                         <td><a href="contentupdateform.php?id=<?php echo $arr['c_id']; ?>">Edit</a></td>
-                        <td><a href="content_delete.php?id=<?php echo $arr['c_id']; ?>">Delete</a></td>
+                        <td><a href="content_delete.php?id=<?php echo $arr['c_id']; ?>" onclick="return confirm('Do you want to delete?')">Delete</a></td>
                       </tr>
                       <?php }?>
 

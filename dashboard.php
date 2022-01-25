@@ -4,7 +4,7 @@ if(!isset($_SESSION['email_id'])){
   header('location:alogin.php');
   die();
 }
- ?>
+ ?> 
 <!DOCTYPE html>
 <html lang="en">
 <head>

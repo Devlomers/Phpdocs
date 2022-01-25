@@ -223,6 +223,11 @@ if(!isset($_SESSION['email_id'])){
                 </thead>
                   <tbody>
                     <?php
+                    // function ConfirmDelete()
+                    // {
+                    //   return confirm("Are you sure you want to delete?");
+                    // }
+                    // <input type="button" onclick="ConfirmDelete()">
                   while($arr = $res->fetch_assoc())
                       {?>
                       <tr>
@@ -232,9 +237,10 @@ if(!isset($_SESSION['email_id'])){
                           <td><?php echo $arr['gender'];?></td>
                           <td><?php echo $arr['dob'];?></td>
                           <td><a href="userupdateform.php?id=<?php echo $arr['u_id']; ?>">Edit</a></td>
-                          <td><a href="delete_user.php?id=<?php echo $arr['u_id']; ?>">Delete</a></td>
+                          <td><a href="delete_user.php?id=<?php echo $arr['u_id']; ?>" onclick="return confirm('Do you want to delete?')">Delete</a></td>
                       </tr> 
                       <?php }?>
+
                   </tbody>
 
                 </table>

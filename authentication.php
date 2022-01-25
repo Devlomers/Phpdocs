@@ -31,6 +31,7 @@
         else{  
             echo "<h1> Login failed. Invalid username or password.</h1>";
             header('location:alogin.php');
+				
         }     
     }
 ?>  

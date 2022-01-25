@@ -231,7 +231,7 @@
                         <td><?php echo $arr['editor_name'];?></td>
                         
                         <td><a href="articleupdateform.php?id=<?php echo $arr['ar_no']; ?>">Edit</a></td>
-                        <td><a href="article_delete.php?id=<?php echo $arr['ar_no']; ?>">Delete</a></td>
+                        <td><a href="article_delete.php?id=<?php echo $arr['ar_no']; ?>" onclick="return confirm('Do you want to delete?')">Delete</a></td>
                       </tr> 
                       <?php }?>
                   </tbody>

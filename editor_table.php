@@ -232,7 +232,7 @@ if(!isset($_SESSION['email_id'])){
                             <td><?php echo $arr['occupation'];?></td>
                             <td><?php echo $arr['city'];?></td>
                             <td><a href="editorupdateform.php?id=<?php echo $arr['e_id']; ?>">Edit</a></td>
-                            <td><a href="delete_editor.php?id=<?php echo $arr['e_id']; ?>">Delete</a></td>
+                            <td><a href="delete_editor.php?id=<?php echo $arr['e_id']; ?>" onclick="return confirm('Do you want to delete?')">Delete</a></td>
                       </tr> 
                       <?php }?>
                   </tbody>

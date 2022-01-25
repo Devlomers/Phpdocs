@@ -45,7 +45,7 @@
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
-                <i class="right fas fa-angle-left"></i>
+                <!-- <i class="right fas fa-angle-left"></i> -->
               </p>
             </a>
             
@@ -128,89 +128,54 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="Admin_tbl.php" class="nav-link">
+                <a href="admin_table.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Admin</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="customertable1.php" class="nav-link">
+                <a href="user_table.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Customer</p>
+                  <p>User</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="data.php" class="nav-link">
+                <a href="editor_table.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Product</p>
+                  <p>Editor</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="seller.php" class="nav-link">
+                <a href="article_table.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Seller</p>
+                  <p>Article</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="category.php" class="nav-link">
+                <a href="content_table.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Category</p>
+                  <p>Content</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="Order.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Order</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="tableunits.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Units</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="productunit.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Product Uints</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="OrderProduct.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Order Product</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="Spin.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Spinning</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="fabcart.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Fab cart</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="Payment.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Payment</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="Delivery.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Delivery</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="Feed_tbl.php" class="nav-link">
+                <a href="feed_table.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Feedback</p>
                 </a>
-              </li> 
+              </li>
+              <li class="nav-item">
+                <a href="useradd_table.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>User Address</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="bookmark_table.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Bookmark</p>
+                </a>
+              </li>
+
             </ul>
           </li>
   
@@ -224,29 +189,18 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="add_product.php" class="nav-link">
+                <a href="art_form.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Product</p>
+                  <p>Article</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="add_category.php" class="nav-link">
+                <a href="content-form.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Category</p>
+                  <p>Content</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="unitfrm.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Seller</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="unit_form.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Units</p>
-                </a>
-              </li>
+
             </ul>
           </li>
           <li class="nav-item menu-open">
@@ -260,7 +214,7 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="alogout.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <img src="img\log-out.svg"></img>
                   <p>Log out</p>
                 </a>
               </li>
