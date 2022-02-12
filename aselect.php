@@ -35,8 +35,7 @@ include('database.php');
             <td><a href="au_login.php?id=<?php echo $arr['a_id']; ?>">Edit</a></td>
             <td><a href="delete_a.php?id=<?php echo $arr['a_id']; ?>">Delete</a></td>
         </tr>
-        <?php}?>
-        </table>
         <?php } ?>
+        </table>
     </body>
 </html>

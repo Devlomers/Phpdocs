@@ -11,11 +11,12 @@
  
 
    $ar_title = $_POST['ar_title'];
-   $ar_sub = $_POST['ar_sub'];
-   $date = $_POST['date'];
-   $editor_name = $_POST['editor_name'];
+   $meta_desc = $_POST['meta_desc'];
+   $user_name = $_POST['user_name'];
+   $description = $_POST['description'];
+   $image = $_POST['image'];
 
-   $sql = "UPDATE `article` SET `ar_title`='$ar_title',`ar_sub`='$ar_sub',`date`='$date',`editor_name`='$editor_name' WHERE `ar_no` ='" . $id ."'";
+   $sql = "UPDATE `article` SET `ar_title`='$ar_title',`meta_desc`='$meta_desc',`user_name`='$user_name',`description`='$description',`image`='$image' WHERE `ar_no` ='" . $id ."'";
    $res = mysqli_query($conn, $sql);
    
    //echo $sql;ex

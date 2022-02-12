@@ -4,7 +4,7 @@
     header('location:alogin.php');
     die();
   }
-   $sql = "SELECT * from `article`";
+   $sql = "SELECT * from `user_article`";
    $res = mysqli_query($conn, $sql);
    
    //echo $sql;ex
@@ -41,8 +41,7 @@
             <td><?php echo $arr['descritpion'];?></td>
             <td><?php echo $arr['image'];?></td>
             
-            <td><a href="articleupdateform.php?id=<?php echo $arr['ar_no']; ?>">Edit</a></td>
-            <td><a href="article_delete.php?id=<?php echo $arr['ar_no']; ?>">Delete</a></td>
+            <td><a href="user_a_delete.php?id=<?php echo $arr['ar_no']; ?>">Delete</a></td>
         </tr> 
         <?php } ?>
         </table>

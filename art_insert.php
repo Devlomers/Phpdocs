@@ -7,12 +7,13 @@
     }
    
    $ar_title = $_POST['ar_title'];
-   $ar_sub = $_POST['ar_sub'];
-   $date = $_POST['date'];
-   $editor_name = $_POST['editor_name'];
+   $meta_desc = $_POST['meta_desc'];
+   $user_name = $_POST['user_name'];
+   $description = $_POST['description'];
+   $image = $_POST['image'];
 
 
-   $sql = "INSERT INTO `article`(`ar_title`,`ar_sub`,`date`,`editor_name`) VALUES ('$ar_title','$ar_sub','$date','$editor_name')";
+   $sql = "INSERT INTO `article`(`ar_title`,`meta_desc`,`user_name`,`description`,`image`) VALUES ('$ar_title','$meta_desc','$user_name','$description','$image')";
    $res = mysqli_query($conn, $sql);
    
    //echo $sql;ex

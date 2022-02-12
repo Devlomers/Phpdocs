@@ -32,20 +32,28 @@
                 <div class="card-body">
                     <div class="form-group">
                     <label for="exampleInputEmail1">Title</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter title" name="ar_title">
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter title" name="ar_title" required>
                   </div>
                   
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Sub-Title</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter sub title" name="ar_sub">
+                    <label for="exampleInputEmail1">Meta_Desc</label>
+                    <Textarea class="form-control" id="exampleInputDOB" placeholder="Enter meta-desc" name="meta_desc" required></Textarea>
                   </div>
-                  <div class="form-group">
+                  <!-- <div class="form-group">
                     <label for="exampleInputPassword1">Date</label>
-                    <input type="date" class="form-control" id="exampleInputPassword1" placeholder="enter date" name="date">
+                    <input type="date" class="form-control" id="exampleInputPassword1" placeholder="enter date" name="date" required>
+                  </div> -->
+                  <div class="form-group">
+                    <label for="exampleInputDOB">User Name</label>
+                    <input type="text" class="form-control" id="exampleInputDOB" placeholder="user" name="user_name" required>
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputDOB">Editor Name</label>
-                    <input type="text" class="form-control" id="exampleInputDOB" placeholder="editor" name="editor_name">
+                    <label for="exampleInputDOB">Description</label>
+                    <Textarea class="form-control" id="exampleInputDOB" placeholder="description" name="description" required></Textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputDOB">Image</label>
+                    <input type="file" class="form-control" id="exampleInputDOB" placeholder="image" name="image" required>
                   </div>
                 <!-- /.card-body -->
 
@@ -58,35 +66,6 @@
         </div>
         </div>
     </section>
-
-<?php
-  include('database.php');
-  if(!isset($_SESSION['email_id'])){
-    header('location:alogin.php');
-    die();
-  }
-     //session_start();
-   
-   if(isset($_POST['insert']))
-   {
-
-    $ar_title = $_POST['ar_title'];
-    $ar_sub = $_POST['ar_sub'];
-    $date = $_POST['date'];
-    $editor_name = $_POST['editor_name'];
-
-   $sql = "INSERT INTO `article`(`ar_title`,`ar_sub`,`date`,`editor_name`) VALUES ('$ar_title','$ar_sub','$date','$editor_name')";
-   $res = mysqli_query($conn, $sql);
-   //echo $sql;ex
-   if(!$res) {
-    die('Data not inserted');
- }
- 
-
-    echo "inserting data";
-    mysqli_close($conn);
-   }
-?>
 
 </body>
 </html>

@@ -15,9 +15,10 @@
                 $rows=$result->fetch_assoc();
                 
                 $ar_title = $rows['ar_title'];
-                $ar_sub = $rows['ar_sub'];
-                $date = $rows['date'];
-                $editor_name = $rows['editor_name'];
+                $meta_desc = $rows['meta_desc'];
+                $user_name = $rows['user_name'];
+                $description = $rows['description'];
+                $image = $rows['image'];
 
 }
 ?>
@@ -59,15 +60,23 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Sub-Title</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter sub title" name="ar_sub" value="<?php echo $ar_sub; ?>">
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter sub title" name="meta_desc" value="<?php echo $meta_desc; ?>">
                   </div>
-                  <div class="form-group">
+                  <!-- <div class="form-group">
                     <label for="exampleInputPassword1">Date</label>
-                    <input type="date" class="form-control" id="exampleInputPassword1" placeholder="" name="date" value="<?php echo $date; ?>">
-                  </div>
+                    <input type="date" class="form-control" id="exampleInputPassword1" placeholder="" name="date" value="">
+                  </div> -->
                   <div class="form-group">
                     <label for="exampleInputDOB">Editor name</label>
-                    <input type="text" class="form-control" id="exampleInputDOB" placeholder="Editor" name="editor_name" value="<?php echo $editor_name; ?>">
+                    <input type="text" class="form-control" id="exampleInputDOB" placeholder="Editor" name="user_name" value="<?php echo $user_name; ?>">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputDOB">Description</label>
+                    <input type="text" class="form-control" id="exampleInputDOB" placeholder="Editor" name="description" value="<?php echo $description; ?>">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputDOB">Image</label>
+                    <input type="file" class="form-control" id="exampleInputDOB" placeholder="Editor" name="image" value="<?php echo $image; ?>">
                   </div>
                 <!-- /.card-body -->
 

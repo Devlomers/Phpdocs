@@ -41,8 +41,7 @@ if(!isset($_SESSION['email_id'])){
 
             <td><a href="delete_feed.php?id=<?php echo $arr['f_id']; ?>">Delete</a></td>
         </tr> 
-        <?php}?>
-        </table>
         <?php } ?>
+        </table>
     </body>
 </html>

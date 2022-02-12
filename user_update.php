@@ -15,8 +15,11 @@
    $password = $_POST['password'];
    $gender = $_POST['gender'];
    $dob = $_POST['dob'];
+   $address = $_POST['address'];
+   $state = $_POST['state'];
+   $pincode = $_POST['pincode'];
 
-   $sql = "UPDATE `user` SET `user_name`='$user_name',`email_id`='$email_id',`password`='$password',`gender`='$gender',`dob`='$dob' WHERE `u_id` ='" . $id . "'";
+   $sql = "UPDATE `user` SET `user_name`='$user_name',`email_id`='$email_id',`password`='$password',`gender`='$gender',`dob`='$dob',`address`='$address',`state`='$state',`pincode`='$pincode' WHERE `u_id` ='" . $id . "'";
    $res = mysqli_query($conn, $sql);
    
    //echo $sql;ex

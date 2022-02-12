@@ -7,7 +7,6 @@
 <!-- Bootstrap 4 -->
 <script src="AdminLTE-master/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- DataTables  & Plugins -->
-<script src="AdminLTE-master/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="AdminLTE-master/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
 <script src="AdminLTE-master/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
 <script src="AdminLTE-master/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>

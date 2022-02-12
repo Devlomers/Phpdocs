@@ -19,6 +19,9 @@ $result = $conn->query($sql);
                 $password = $rows['password'];
                 $gender = $rows['gender'];
                 $dob = $rows['dob'];
+                $address = $rows['address'];
+                $state = $rows['state'];
+                $pincode = $rows['pincode'];
 
 }
 ?>
@@ -75,6 +78,19 @@ $result = $conn->query($sql);
                   <div class="form-group">
                     <label for="exampleInputDOB">DOB</label>
                     <input type="text" class="form-control" id="exampleInputDOB" placeholder="DOB" name="dob" value="<?php echo $dob; ?>">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Name</label>
+                    <textarea class="form-control" id="exampleInputEmail1" placeholder="Enter address" name="user_name" value="<?php echo address; ?>">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">State</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="State" name="user_name" value="<?php echo $state; ?>">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Pincode</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Pincode" name="user_name" value="<?php echo $pincode; ?>">
                   </div>
                 <!-- /.card-body -->
 

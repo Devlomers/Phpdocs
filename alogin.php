@@ -1,31 +1,45 @@
 <?php
-include("database.php");
-// if(!isset($_SESSION['email_id'])){
-//   header('location:alogin.php');
-//   die();
-// }
-    // $message="";
-    // if(count($_POST)>0) 
-    // {
-    //     $result = mysqli_query($conn,"SELECT * FROM `admin` WHERE email_id ='" . $_POST["email_id"] . "' && (password = '". $_POST["password"]."')");
-    //     $row=$result->fetch_assoc();
-    //     if(is_array($row))
-    //      {
-    //       $_SESSION["email_id"] = $row['email_id'];
-    //       $_SESSION["password"] = $row['password'];
-    //      } else
-    //     {
-    //      $message = "Invalid Username or Password!";
-    //     }
-    // }
+include("database.php");     
+
+    // $admin_name = $_POST['admin_name'];
+    // $password = $_POST['password'];
+    // $error = "";
+    // $success = "";
+    $error = "";
+
+    if(isset($_POST['insert'])){
+
+        $email_id = $_POST['email_id'];  
+        $password = $_POST['password'];  
+        $success = "";
+    
+      
+        //to prevent from mysqli injection  
+        // $username = stripcslashes($username);  
+        //$password = stripcslashes($password);  
+        //$username = mysqli_real_escape_string($con, $username);  
+        //$password = mysqli_real_escape_string($con, $password);  
+      
+        $sql = "SELECT * from `admin` WHERE `email_id` = '$email_id' and `password` = '$password'";   
+        $result = mysqli_query($conn, $sql);  
+        $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
+        $count = mysqli_num_rows($result);  
+        
+          
+        if($count == 1){ 
+            echo "Login successful";
+            $_SESSION['email_id'] = $row['email_id'];
+            header('location:dashboard.php'); 
+            die();
+        }  
+        else if($password != "password"){  
+            $error="Login failed. Invalid username or password";
+            // header('location:alogin.php');				
+        }     
+    }
     // // $pass = password_hash($Password, PASSWORD_BCRYPT);
     // // $Cpass = password_hash($Cpassword, PASSWORD_BCRYPT);
-    // if(isset($_SESSION["email_id"]))
-    //  {
 
-    //    header("Location:dashboard.php");
-
-    // }
 ?>
 
 <!DOCTYPE html>
@@ -55,24 +69,25 @@ include("database.php");
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form method="post" action="authentication.php">
+              <form method="post">
                 <div class="card-body">
 
                   <div class="form-group">
                     <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" name="email_id">
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" name="email_id" required>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password" required>
                   </div>
                 <!-- /.card-body -->
 
-                <div class="card-footer">
+                <div class="card-footer" style="width:15%;">
                   <button type="submit" class="btn btn-primary" name="insert" href="dashboard.php"> Log In</button>
                 </div>
               </form>
             </div>
+            <p class="error" style="color:red; margin-left:15px; "> <?php echo $error; ?> </p>
         </div>
     </div>
 </section>

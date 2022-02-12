@@ -2,12 +2,17 @@
     include('database.php');
 
     session_start();
+    // $admin_name = $_POST['admin_name'];
+    // $password = $_POST['password'];
+    // $error = "";
+    // $success = "";
 
     if(isset($_POST['insert'])){
 
         $email_id = $_POST['email_id'];  
         $password = $_POST['password'];  
-
+        $error = "";
+        $success = "";
     
       
         //to prevent from mysqli injection  
@@ -28,10 +33,9 @@
             header('location:dashboard.php'); 
             die();
         }  
-        else{  
-            echo "<h1> Login failed. Invalid username or password.</h1>";
-            header('location:alogin.php');
-				
+        else if($password != "password"){  
+            $error="Login failed. Invalid username or password";
+            // header('location:alogin.php');				
         }     
     }
 ?>  
